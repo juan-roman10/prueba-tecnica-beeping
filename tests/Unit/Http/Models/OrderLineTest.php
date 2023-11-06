@@ -3,10 +3,10 @@
 namespace Tests\Unit\Http\Models;
 
 use Tests\TestCase;
-use App\Models\OrderLine;
+use App\Models\OrdersLine;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class OrderLineTest extends TestCase
+class OrdersLineTest extends TestCase
 {
     use RefreshDatabase;
 
@@ -17,7 +17,7 @@ class OrderLineTest extends TestCase
      */
     public function test_order_line_exists()
     {
-        $order_line = OrderLine::factory()->create();
+        $order_line = OrdersLine::factory()->create();
         $this->assertModelExists($order_line);
     }
 }
