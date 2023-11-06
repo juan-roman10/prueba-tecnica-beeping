@@ -17,11 +17,9 @@ class CreateOrdersLinesTable extends Migration
             $table->id();
             $table->bigInteger('order_id')->unsigned();
             $table->integer('qty')->unsigned();
-            $table->bigInteger('product_id')->unsigned();
             $table->timestamps();
 
             $table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade');
-            $table->foreign('product_id')->references('id')->on('products');
         });
     }
 
