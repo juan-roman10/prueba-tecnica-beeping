@@ -13,6 +13,6 @@ class Order extends Model
 
     public function ordersLines()
     {
-        return $this->hasMany(OrdersLine::class);
+        return $this->hasOne(OrdersLine::class);
     }
 }
