@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['order_ref', 'customer_name'];
+
+    public function orders_lines()
+    {
+        return $this->hasMany(OrdersLine::class);
+    }
 }
